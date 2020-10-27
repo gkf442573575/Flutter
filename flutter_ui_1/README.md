@@ -1,4 +1,4 @@
-# flutter_ui_1
+# flutter_app_1
 
 A new Flutter application.
 

@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   void animateWidget() {
     bool increment = direction <= 0;
     AnimationController _controller =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300))
+        AnimationController(duration: Duration(milliseconds: 300), vsync: this)
           ..addListener(() {
             setState(() {
               left = _animation.value;
