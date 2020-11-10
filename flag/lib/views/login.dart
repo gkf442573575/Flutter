@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../utils/global.dart';
 
 class Login extends StatefulWidget {
   Login({Key key}) : super(key: key);
@@ -31,7 +32,7 @@ class _LoginState extends State<Login> {
   loginContainer() {
     final Color purpleColor = Colors.deepPurpleAccent;
     return Container(
-        color: Color.fromRGBO(246, 249, 250, 1),
+        color: Global.bgColor,
         width: 390,
         height: 450,
         alignment: Alignment.center,
