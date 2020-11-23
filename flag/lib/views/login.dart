@@ -30,7 +30,7 @@ class _LoginState extends State<Login> {
   }
 
   loginContainer() {
-    final Color purpleColor = Colors.deepPurpleAccent;
+    final Color purpleColor = Global.primaryColor;
     return Container(
         color: Global.bgColor,
         width: 390,
@@ -82,24 +82,38 @@ class _LoginState extends State<Login> {
                       ]),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 50,
                 ),
-                TextFormField(
-                  decoration: InputDecoration(
-                      labelText: '密码',
-                      hintText: '请输入密码',
-                      labelStyle: TextStyle(color: purpleColor),
-                      prefixIcon: Icon(
-                        Icons.lock,
-                        color: purpleColor,
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: purpleColor))),
-                  validator: (v) {
-                    // 校验用户名
-                    return v.trim().length > 0 ? null : '密码不能为空';
-                  },
-                  obscureText: true,
+                Container(
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                        // labelText: '密码',
+                        hintText: '请输入密码',
+                        prefixIcon: Icon(
+                          Icons.lock,
+                          color: purpleColor,
+                        ),
+                        fillColor: Colors.white,
+                        filled: true,
+                        contentPadding:
+                            const EdgeInsets.symmetric(vertical: 4.0),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                            borderSide: BorderSide.none)),
+                    validator: (v) {
+                      // 校验用户名
+                      return v.trim().length > 0 ? null : '密码不能为空';
+                    },
+                    obscureText: true,
+                  ),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color.fromRGBO(218, 232, 237, 0.52),
+                          blurRadius: 5.0,
+                        ),
+                      ]),
                 ),
               ],
             )));
