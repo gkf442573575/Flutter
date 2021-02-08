@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 
 class Theme {
-
   /**
    * 登录界面，定义渐变的颜色
    */
